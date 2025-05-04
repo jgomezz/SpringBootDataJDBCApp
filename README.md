@@ -5,9 +5,17 @@
 
 #### 1.- Relacionar las clases de los entities con las tablas
 ```
-@Table
-@Id
-@Column
+@Table("categorias")
+public class Categoria {
+
+    @Id
+    private Long id;
+    @Column("nombre")
+    private String nombre;
+    @Column("orden")
+    private Integer orden;
+
+}
 ```
 
 
