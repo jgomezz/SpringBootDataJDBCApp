@@ -19,5 +19,14 @@ public class Categoria {
 ```
 
 
-#### 2.- En la capa de repositorio extender las interfases de CrudRepositorio 
+#### 2.- En la capa de repositorio extender las interfases de CrudRepository y se paramétriza 
+
+```
+public interface CategoriaRepository extends CrudRepository<Categoria,Long> {
+
+    List<Categoria> findAll() ;
+
+}
+```
+
 #### 3.- Eliminar las implementaciones de la capa de de repositorio
