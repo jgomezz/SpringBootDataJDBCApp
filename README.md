@@ -27,6 +27,18 @@ public interface CategoriaRepository extends CrudRepository<Categoria,Long> {
     List<Categoria> findAll() ;
 
 }
+
+public interface ProductoRepository extends CrudRepository<Producto,Long> {
+
+     List<Producto> findAll() ;
+
+     List<Producto> findByNombre(String nombre) ;
+
+     @Modifying
+     @Query("UPDATE productos SET nombre = :nombreProducto WHERE id = :id ")
+     void update(@Param("id") Long id, @Param("nombreProducto") String nombreProducto);
+     
+}
 ```
 
 #### 3.- Eliminar las implementaciones de la capa de repositorio
