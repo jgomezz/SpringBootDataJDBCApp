@@ -29,4 +29,4 @@ public interface CategoriaRepository extends CrudRepository<Categoria,Long> {
 }
 ```
 
-#### 3.- Eliminar las implementaciones de la capa de de repositorio
+#### 3.- Eliminar las implementaciones de la capa de repositorio
